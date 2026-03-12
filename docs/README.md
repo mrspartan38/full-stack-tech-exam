@@ -6,14 +6,14 @@
 
 | Component | Link | 
 |-----------|------|
-| **GitHub Repository** | [https://github.com/your-username/your-repo-name](https://github.com/your-username/your-repo-name) | 
-| **GitHub Pages (docs/)** | [https://your-username.github.io/your-repo-name/](https://your-username.github.io/your-repo-name/) | 
-| **Dev Server (Render)** | [https://your-app-name-dev.onrender.com](https://your-app-name-dev.onrender.com) | 
-| **Production Server (GCP)** | [http://your.static.external.ip:3000](http://your.static.external.ip:3000) | 
-| **Issue** | [https://github.com/your-username/your-repo-name/issues/1](https://github.com/your-username/your-repo-name/issues/1) | 
-| **Pull Request** | [https://github.com/your-username/your-repo-name/pull/1](https://github.com/your-username/your-repo-name/pull/1) | 
-| **Milestone** | [https://github.com/your-username/your-repo-name/milestone/1](https://github.com/your-username/your-repo-name/milestone/1) | 
-| **Successful CI/CD Action** | [https://github.com/your-username/your-repo-name/actions/runs/your-run-id](https://github.com/your-username/your-repo-name/actions/runs/your-run-id) | 
+| **GitHub Repository** | [https://github.com/your-username/your-repo-name](https://github.com/mrspartan38/full-stack-tech-exam) | 
+| **GitHub Pages (docs/)** | [https://your-username.github.io/your-repo-name/](https://mrspartan38.github.io/full-stack-tech-exam/) | 
+| **Dev Server (Render)** | [https://your-app-name-dev.onrender.com](https://full-stack-tech-exam.onrender.com) | 
+| **Production Server (GCP)** | [http://your.static.external.ip:3000](http://35.243.226.188:3000) | 
+| **Issue** | [https://github.com/your-username/your-repo-name/issues/1](https://github.com/mrspartan38/full-stack-tech-exam/issues/2) | 
+| **Pull Request** | [https://github.com/your-username/your-repo-name/pull/1](https://github.com/mrspartan38/full-stack-tech-exam/pull/1) | 
+| **Milestone** | [https://github.com/your-username/your-repo-name/milestone/1](https://github.com/mrspartan38/full-stack-tech-exam/milestone/1) | 
+| **Successful CI/CD Action** | [https://github.com/your-username/your-repo-name/actions/runs/your-run-id](https://github.com/mrspartan38/full-stack-tech-exam/actions/runs/23017458180) | 
 | **ssh cmd to your gcp** | `ssh -i student-key bcumbie@your.static.external.ip` | 
 
 ---
