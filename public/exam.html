@@ -9,22 +9,68 @@
 
 <body>
   <h1>Full Stack Tech Exam</h1>
-  
+
   <!-- 💁🏼‍♂️ you may need to initialize some data before searching. Check the server endpoints -->
-  
+
   <div>
     <h2>Search for Name</h2>
-    <!-- 
-    this form doesn't let you receive data back and put into the <p id="result">.
-    what do we need to do here with an external <script> 
-    -->
+
     <form id="nameForm" method="post" action="api/get-name/">
       <label for="userName">Enter name:</label>
       <input id="userName" name="userName" placeholder="Enter a name (e.g., barry)" required>
-      <input type="submit" value="Search"> 
+      <input type="submit" value="Search">
     </form>
     <p id="result"></p>
   </div>
+  <script>
+    <script>
+      console.log('Received name search:', req.body);
+      const form = document.getElementById('nameForm');
+      const resultParagraph = document.getElementById('result');
+
+      form.addEventListener('submit', async function(event) {
+        event.preventDefault();
+      }
+      const name = document.getElementById('userName').value.trim();
+
+      if (!name) {
+        resultParagraph.textContent = 'Please enter a name.';
+      return;
+      }
+
+      resultParagraph.textContent = 'Searching...';
+
+      try {
+        const response = await fetch('/api/get-name/', {
+        method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+          },
+      body: JSON.stringify({userName: name })
+        });
+      }
+      const data = await response.json();
+
+      if (response.ok) {
+          if (data.error) {
+        resultParagraph.textContent = data.error;  // shows "Failed to retrieve name"
+          } else if (data.found === false || !data.person) {
+        resultParagraph.textContent = `No person found with name "${name}"`;
+          } else {
+        // Adjust fields based on what your actual documents contain
+        resultParagraph.innerHTML = `
+              <strong>Found:</strong><br>
+              Name: ${data.person.name || data.person.userName || '—'}<br>;
+          }
+        } else {
+          throw new Error(`Server responded with ${response.status}`);
+        }
+      } catch (err) {
+        console.error('Frontend fetch error:', err);
+        resultParagraph.textContent = 'Error contacting server: ' + err.message;
+      }
+    });
+  </script>
 </body>
 
 </html>
